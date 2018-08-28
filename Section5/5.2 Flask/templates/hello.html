@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Melissa's Sandwiches!</title>
+    </head>
+    <body>
+
+
+    <h1>Welcome to Melissa's Sandwiches</h1>
+
+
+        <form action="" method="post">
+
+            <div>
+                {{ form.name.label }} {{ form.name }}
+            </div>
+
+            <br><br>
+
+            <div>
+                {{ form.order.label }} {{ form.order }}
+            </div>
+
+            <br><br>
+
+            <div>
+                <input type="submit" name="submit" value="Submit Order" />
+            </div>
+
+            <div>
+                <input type="submit" name="submit" value="FAQ" />
+            </div>
+        </form>
+
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div>
+                    {% for message in messages %}
+                        <p>{{ message[1] }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+
+    </body>
+</html>

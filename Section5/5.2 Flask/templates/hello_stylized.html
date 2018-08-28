@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>Melissa's Sandwiches!</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='freelancer.css') }}" >
+    </head>
+    <body>
+
+        <div class="my_head">
+            <h1>Order a Sandwich: </h1>
+        </div>
+        <hr>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul>
+                    {% for message in messages %}
+                        <li>{{ message[1] }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+        <form action="" method="post">
+            {{ form.csrf }}
+
+            <div>
+                {{ form.name.label }} {{ form.name }}
+            </div>
+
+            <br><br>
+
+            <div>
+                {{ form.order.label }} {{ form.order }}
+            </div>
+
+
+            <div class="input submit">
+                <input type="submit" value="Submit" />
+            </div>
+        </form>
+    </body>
+</html>
