@@ -19,8 +19,9 @@ To fully benefit from the coverage included in this course, you will need:<br/>
 The course is targeted at Python dev who would want to learn how to test, maintain and evolve their software with PyCharm
 ### Technical Requirements
 This course has the following software requirements:<br/>
-Install PyCharm
-Basic knowledge for Python
+<UL>
+<LI>Install PyCharm</LI>
+<LI>Basic knowledge for Python</LI></UL>
 
 ## Related Products
 * [Mastering PyCharm](https://www.packtpub.com/web-development/mastering-pycharm?utm_source=github&utm_medium=repository&utm_campaign=9781783551316)
